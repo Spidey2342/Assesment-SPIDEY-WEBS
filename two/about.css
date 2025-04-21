@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: rgb(255, 72, 0);
+    --secondary-color: rgb(49, 49, 49);
+}
+
+header {
+    background: var(--secondary-color);
+    height: 15vh;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.7em;
+    color: white;
+    font-weight: 900;
+}
+
+.head {
+    color: var(--primary-color);
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: 300;
+    font-size: 0.8em;
+}
+
+.btn {
+    background: var(--primary-color);
+    width: 140px;
+    height: 46px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-weight: 400;
+    transition: .4s;
+}
+
+.btn:hover {
+    background: white;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    transition: 0.3s;
+}
+
+.about {
+    height: auto;
+    padding: 10vh 0 10vh 0;
+}
+
+.about-us {
+    height: 30vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.text {
+    width: 30%;
+    text-align: center;
+}
+
+.text-1 {
+    width: 60%;
+    text-align: center;
+}
+
+.text-1 h1 {
+    font-size: 3.4em;
+    margin-bottom: 50px;
+}
+
+.text-1 p {
+    text-align: left;
+    line-height: 30px;
+}
+
+.back {
+    height: 30vh;
+    padding: 0 0 10vh 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.805), rgba(0, 0, 0, 0.611), rgba(0, 0, 0, 0.382)), url(img/adi-goldstein-EUsVwEOsblE-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.choose {
+    height: auto;
+    padding: 0 0 10vh 0;
+}
+
+.choose-us {
+    height: 50vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.text-2 {
+    width: 50%;
+}
+
+.text-2 p {
+    line-height: 30px;
+}
+
+.text-3 {
+    width: 20%;
+    text-align: center;
+}
+
+.btn2 {
+    background: var(--primary-color);
+    width: 140px;
+    height: 46px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 400;
+    transition: .4s;
+}
+
+footer {
+    height: auto;
+    padding: 5vh 0 10vh 0;
+    background: var(--secondary-color);
+}
+
+.footer {
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background: var(--secondary-color);
+}
+
+.link1 p {
+    color: white;
+    width: 250px;
+}
+
+.link2 h6 {
+    color: white;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.link2 ul li {
+    margin-bottom: 10px;
+}
+
+.link2 ul li a {
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.link {
+    display: flex;
+    gap: 10px;
+
+}
+
+.link img {
+    height: 20px;
+}
+
+.link3 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.link3 h6 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: white;
+}
+
+.link p {
+    color: white;
+    font-size: 0.9em;
+}
+
+@media screen and (min-width:720px) {
+    .footer {
+        height: 55vh;
+    }
+
+    .link1 p {
+        font-size: 0.9em;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:720px) {
+    .logo {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .choose {
+        margin-bottom: 80px;
+    }
+
+    .footer {
+        text-align: center;
+        justify-content: center;
+        gap: 20px;
+        height: 80vh;
+    }
+
+    .link1 p {
+        font-size: 0.9em;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    nav ul {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: teal;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+        transition: height 0.3s ease-in-out;
+    }
+
+    nav ul.active {
+        height: 200px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .about {
+        padding: 10dvh 0 10dvh 0;
+    }
+
+    .about-us {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        flex-direction: column;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .text-1 {
+        width: 80%;
+    }
+
+    .choose {
+        padding: 10dvh 0 10dvh 0;
+    }
+
+    .choose-us {
+        margin-top: 200px;
+        margin-bottom: 100px;
+        flex-direction: column;
+    }
+
+    .text-2 {
+        width: 80%;
+    }
+
+    .text-3 {
+        width: 100%;
+    }
+
+    .footer {
+        height: 120vh;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
