@@ -7,6 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPIDEY-WEBS(HOME)</title>
     <!-- Lumora Analytics -->
+    
+<!-- Lumora Analytics -->
+<script>
+(function() {
+    var la = window.la = window.la || [];
+    la.methods = ['pageview', 'track', 'identify'];
+    la.factory = function(method) {
+        return function() {
+            var args = Array.prototype.slice.call(arguments);
+            args.unshift(method);
+            la.push(args);
+            return la;
+        };
+    };
+    for (var i = 0; i < la.methods.length; i++) {
+        var key = la.methods[i];
+        la[key] = la.factory(key);
+    }
+    la.load = function(key, id, verify) {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://demodash.ct.ws/api.php?action=tracker&v=' + verify;
+        var first = document.getElementsByTagName('script')[0];
+        first.parentNode.insertBefore(script, first);
+        la._apiKey = 'la_b99ab0e26ebddd8647ec4ae8069d0f54';
+        la._siteId = 'site_68e436fda6cf2';
+        la._endpoint = 'https://demodash.ct.ws/api.php';
+        la._verification = 'verify_91d66cc9661b7f9b';
+    };
+    la.SNIPPET_VERSION = '1.0.0';
+    la.load('la_b99ab0e26ebddd8647ec4ae8069d0f54', 'site_68e436fda6cf2', 'verify_91d66cc9661b7f9b');
+})();
+</script>
 </head>
 
 <body>
@@ -159,4 +192,5 @@
 
 
 </html>
+
 
